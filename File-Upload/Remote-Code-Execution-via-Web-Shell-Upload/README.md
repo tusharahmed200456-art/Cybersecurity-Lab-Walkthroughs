@@ -118,5 +118,3 @@ I learned how an unsafe file upload can allow an attacker to run PHP code on a w
 This was a good practical experience with Burp Suite and File Upload Vulnerability.
 
 **Practice Platform:** PortSwigger Web Security Academy
-
-**Note:** This lab was completed in an authorized practice environment.
