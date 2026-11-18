@@ -1,0 +1,85 @@
+Web Shell Upload via Content-Type Restriction Bypass
+
+Platform: PortSwigger Web Security Academy
+
+Level: Apprentice
+
+Category: File Upload
+
+Status: Solved
+
+1. What is this Lab?
+
+In this lab, I learned how to bypass a file upload restriction.
+
+The website only allowed image files like JPG and PNG. But I found that the website trusted the Content-Type value sent by the browser.
+
+2. Tools I Used
+
+Burp Suite professional
+
+PortSwigger Web Security Academy
+
+3. What I Did
+
+Logged in to the lab.
+
+Opened the profile image upload option.
+
+Captured the upload request using Burp Suite.
+
+Checked the file name and Content-Type.
+
+Changed the Content-Type to image/jpeg.
+
+Sent the modified request.
+
+The server accepted the PHP file.
+
+Opened the uploaded file.
+
+Retrieved the secret file.
+
+Successfully solved the lab.
+
+4. What I Learned
+
+How file upload works.
+
+How to use Burp Suite.
+
+How to change a Content-Type header.
+
+How file upload restrictions can be bypassed.
+
+Why file upload security is important.
+
+5. Security Impact
+
+If a website allows dangerous files to be uploaded and executed, an attacker may:
+
+Run PHP code on the server.
+
+Read sensitive files.
+
+Access important server data.
+
+Damage or compromise the server.
+
+6. How to Prevent This Vulnerability
+
+Check file types on the server.
+
+Allow only safe file extensions.
+
+Check the actual file content.
+
+Do not allow PHP execution in upload folders.
+
+Store uploaded files in a safe location.
+
+7. Final Result
+
+Lab Successfully Solved!
+
+This lab helped me understand file upload vulnerabilities and how attackers may bypass weak file validation.
