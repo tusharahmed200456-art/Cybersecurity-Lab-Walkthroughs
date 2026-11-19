@@ -1,0 +1,30 @@
+Broken Brute-Force Protection, IP Block
+Difficulty: Practitioner
+
+
+Lab Description:
+In this lab, I learned about a weakness in login protection.
+The website blocks login attempts after too many wrong passwords. But I found a way to bypass this protection.
+
+Tools Used:
+Burpsuite pro
+proxy
+intruder
+repeter
+
+Steps:
+I opened the lab and logged in using my account(wiener:peter)
+I captured the login request in Burp Suite
+I sent the request to Intruder
+I added the username and password payloads
+I used the Pitchfork attack type
+I checked the responses and found the correct password for Carlos
+I logged in to Carlos's account
+Finally, the lab was solved
+
+ I Learned:
+How brute-force protection works
+How to use Burp Intruder
+How Pitchfork attack works
+Why login protection can fail because of a logic flaw
+Finally lab solved
