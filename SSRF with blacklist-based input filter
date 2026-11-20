@@ -1,0 +1,40 @@
+SSRF with Blacklist-Based Input Filter
+Difficulty: Practitioner
+Vulnerability: Server-Side Request Forgery (SSRF)
+I learned how SSRF can happen when a website does not properly check a URL.
+Steps:
+Challenges I Faced
+While solving this lab, I faced two main problems
+
+ Hostname Blocked
+ First, I tried:
+http://localhost/admin
+
+The website blocked my request and returned a 400 Bad Request response.
+To bypass this hostname filter, I tried:
+
+http://127.1/
+It worked because 127.1 is another representation of the loopback address.
+
+ Admin Path Blocked
+The website also blocked the /admin path.
+
+I used double URL encoding:
+/%2561dmin
+
+This helped me bypass the path filter and access the admin page.
+
+3. Deleting the User
+
+After accessing the admin page, I found the delete endpoint for carlos.
+
+I sent the request through the stock check feature:
+
+http://127.1/%2561dmin/delete?username=carlos
+
+The lab was successfully solved.
+
+Final Result
+
+I learned how weak hostname and path blacklists can allow SSRF attacks against internal resources.
+
